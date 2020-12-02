@@ -49,6 +49,7 @@ services:
     build: ./wpcli/
     image: wpcli
     container_name: ${COMPOSE_PROJECT_NAME}_wpcli
+    command: wp plugin delete hello akismet
     volumes:
       - ${WORDPRESS_DATA_DIR:-./wordpress}:/var/www/html
     working_dir: /var/www/html
